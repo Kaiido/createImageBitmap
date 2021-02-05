@@ -14,7 +14,7 @@ Feature                                   | ![Chromium based][2] | ![Firefox][3]
 createImageBitmap + cropping              | native               | native                | ✔ <sup>(1)</sup>
 HTMLImageElement as source                | native               | native                | ✔
 HTMLCanvasElement as source               | native               | native                | ✔
-OffscreenCanvas as source                 | native               | :x:                   | :x:
+OffscreenCanvas as source                 | native               | ❌                   | ❌
 SVGImageElement as source                 | native               | native                | ✔
 ImageBitmap as source                     | native               | native                | ✔
 ImageData as source                       | native               | native                | ✔
@@ -23,14 +23,14 @@ SVG image in Blob as source <sup>(2)</sup>| ✔                    | ✔        
 ImageBitmapOptions                        | native               | ✔                     | ✔
 resizeWidth & resizeHeight                | native               | ✔                     | ✔
 resizeQuality: pixelated                  | native               | ✔                     | ✔
-resizeQuality: low                        | native               | :x:                   | :x:
+resizeQuality: low                        | native               | ❌                   | ❌
 resizeQuality: medium                     | native               | native                | ✔
-resizeQuality: high                       | native               | :x:                   | :x:
+resizeQuality: high                       | native               | ❌                   | ❌
 imageOrientation                          | native               | ✔                     | ✔
-colorSpaceConversion                      | native               | :x:                   | :x:
-premultiplyAlpha                          | native               | :x:                   | :x:
-Available in Workers                      | native               | native <sup>(3)</sup> | :x:
-Transferrable                             | native               | native                | :x:
+colorSpaceConversion                      | native               | ❌                   | ❌
+premultiplyAlpha                          | native               | ❌                   | ❌
+Available in Workers                      | native               | native <sup>(3)</sup> | ❌
+Transferrable                             | native               | native                | ❌
 
 <sup>(1) Returns a modified HTMLCanvasElement instance in place of an ImageBitmap object.</sup>  
 <sup>(2) Only for SVG images with an intrinsic width and height, as per the specs recommendation.</sup>  
