@@ -59,6 +59,7 @@ async function cropBlobImage( blob, options ) {
 
   const url = globalThis.URL.createObjectURL( blob );
   const img = await loadImage( url );
+  globalThis.URL.revokeObjectURL( blob );
 
   return cropImage( img, options );
 
