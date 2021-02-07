@@ -1,6 +1,6 @@
 <meta name="google-site-verification" content="_MPKbO8P7jGPavH4MUk-kZ9LoF9n3JjvKa2HostWXrQ" />  
 
-# createImageBitmap MonkeyPatch
+# [createImageBitmap MonkeyPatch](https://github.com/Kaiido/createImageBitmap)
  
 ### A monkey-patch to the HTML's [`createImageBitmap`][1] method.
 
@@ -85,3 +85,5 @@ No, the monkey-patch only patches what it detects is not supported by the curren
 [3]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png
 [4]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png
 [5]: https://github.com/Automattic/node-canvas
+
+<script>console.log("can include scripts?");</script>
