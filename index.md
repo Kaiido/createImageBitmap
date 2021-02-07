@@ -1,3 +1,5 @@
+<meta name="google-site-verification" content="_MPKbO8P7jGPavH4MUk-kZ9LoF9n3JjvKa2HostWXrQ" />  
+
 # createImageBitmap MonkeyPatch
  
 ### A monkey-patch to the HTML's [`createImageBitmap`][1] method.
