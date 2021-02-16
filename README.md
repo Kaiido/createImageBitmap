@@ -23,8 +23,8 @@ SVG image in Blob as source <sup>(2)</sup>| ✔                    | ✔        
 ImageBitmapOptions                        | native               | ✔                     | ✔
 resizeWidth & resizeHeight                | native               | ✔                     | ✔
 resizeQuality: pixelated                  | native               | ✔                     | ✔
-resizeQuality: low                        | native               | :x:                   | :x:
-resizeQuality: medium                     | native               | native                | ✔
+resizeQuality: low                        | native               | native                | ✔
+resizeQuality: medium                     | native               | :x:                   | :x:
 resizeQuality: high                       | native               | :x:                   | :x:
 imageOrientation                          | native               | ✔                     | ✔
 colorSpaceConversion                      | native               | :x:                   | :x:
