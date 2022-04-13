@@ -103,7 +103,7 @@ async function testBitmapBlobSource() {
     }
   }
   catch( err ) {
-    console.log( err );
+
   }  
 
   return out;
@@ -181,7 +181,7 @@ async function testSVGImageElementSource() {
     out.push( "_SVGImageElement" );
   }
   catch( err ) {
-    console.error( err );
+
   }
 
   return out;
@@ -197,7 +197,7 @@ function requiresPolyfill( missing_features, options, source ) {
       return true;
     }
     const is_svg_blob = blobCanBeSVG( source );
-    if( missing_features.has( "_SVGBlob" ) ) {
+    if( is_svg_blob && missing_features.has( "_SVGBlob" ) ) {
       return true;
     }  
   }
