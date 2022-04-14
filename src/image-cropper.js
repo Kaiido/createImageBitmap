@@ -66,12 +66,8 @@ async function cropBlobImage( blob, options ) {
 }
 async function cropImageData( img, options ) {
 
-  const {
-    resizeWidth,
-    resizeHeight,
-    resizeQuality,
-    imageOrientation
-  } = options;
+  const { resizeWidth, resizeHeight } = parseResizeOptions( img, options );
+  const { resizeQuality, imageOrientation } = options;
   const cropRect = options.cropRect || {};
   // beware, sw and sh can be negative
   const sx = cropRect.sx || 0;
@@ -125,7 +121,8 @@ async function cropImageData( img, options ) {
 function getFinalCropRect( source, options ) {
 
   const { width, height } = getSourceDimensions( source );
-  const { resizeWidth, resizeHeight } = options;
+  const { resizeWidth, resizeHeight } = parseResizeOptions( source, options );
+  
   const crop_rect = options.cropRect ||
     { sx: 0, sy: 0, sw: width, sh: height };
   const dest_rect = {
@@ -183,6 +180,22 @@ function getSafeRect( width, height, { sx, sy, sw, sh }, { dx, dy, dw, dh } ) {
     dh: (y2 - y1) * h_ratio
   };
 
+}
+
+function parseResizeOptions( source, options ) {
+
+  const { width, height } = getSourceDimensions( source );
+  let { resizeWidth, resizeHeight } = options;
+  if( resizeWidth === undefined && resizeHeight !== undefined ) {
+    const { width, height } = getSourceDimensions( source );
+    resizeWidth = Math.ceil( width * (resizeHeight / height) );
+  }
+  if( resizeHeight === undefined && resizeWidth !== undefined ) {
+    const { width, height } = getSourceDimensions( source );
+    resizeHeight = Math.ceil( height * (resizeWidth / width) );
+  }
+  return { resizeWidth, resizeHeight };
+  
 }
 
 export {
