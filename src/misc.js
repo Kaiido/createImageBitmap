@@ -33,7 +33,7 @@ function enforceRangeLong( value ) {
 // because to load it in a <img>,
 // the type must be set to this value
 function blobCanBeSVG( blob ) {
-  return blob?.type === "image/svg+xml";
+  return blob && blob.type === "image/svg+xml";
 }
 
 function get2dContext( width, height ) {

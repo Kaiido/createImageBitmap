@@ -34,7 +34,7 @@ function parseOptions( source, ...args ) {
   }
   if( arguments_count > 2 && arguments_count < 5 ) {
     const error_count_msg = error_messages.ARGUMENT_COUNT_N.replace( "%s", arguments_count );
-    throw new TypeError( common_error_header + err_count_msg );
+    throw new TypeError( common_error_header + error_count_msg );
   }
   if( arguments_count >= 5 ) { // 'sw' and 'sh' are defined
     if( !sw || !sh ) { // convertToLong converts invalid longs to NaN
